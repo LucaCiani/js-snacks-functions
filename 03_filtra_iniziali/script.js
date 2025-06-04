@@ -4,11 +4,11 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 // Dichiara la funzione qui.
 
-function passLetterA() {
+function passLetterA(groupNames) {
     const finalNames = [];
-    for (let i = 0; i < names.length; i++) {
-        if (names[i].split("").shift() == "A") {
-            finalNames.push(names[i]);
+    for (let i = 0; i < groupNames.length; i++) {
+        if (groupNames[i].startsWith("A")) {
+            finalNames.push(groupNames[i]);
         }
     }
     return finalNames;
@@ -16,6 +16,6 @@ function passLetterA() {
 
 // Invoca la funzione qui e stampa il risultato in console
 
-console.log(passLetterA());
+console.log(passLetterA(names));
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
