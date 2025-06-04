@@ -7,11 +7,9 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 function passLetterA() {
     const finalNames = [];
     for (let i = 0; i < names.length; i++) {
-        const getNames = [];
         if (names[i].split("").shift() == "A") {
-            getNames.push(names[i]);
+            finalNames.push(names[i]);
         }
-        finalNames.push(getNames);
     }
     return finalNames;
 }
